@@ -1,6 +1,7 @@
 const mongoose = require('mongoose')
-
-mongoose.connect("mongodb+srv://powerguide93:UTKARSH%403960@projectwebsite.8ad9shy.mongodb.net/paytm")
+require('dotenv').config();
+const { MONGODB_URL } = process.env;
+mongoose.connect(MONGODB_URL)
 
 const userSchema = new mongoose.Schema({
     username: {
